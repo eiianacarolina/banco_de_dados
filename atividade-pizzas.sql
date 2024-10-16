@@ -39,6 +39,7 @@ select count(pedidos.id) as 'pedidos', nome from pedidos right join clientes on 
 
 -- Exercício 14:
 select nome, pedidos.valor from pedidos inner join clientes on clientes.id = pedidos.cliente_id order by valor desc limit 1;
+-- nesse contexto não utilizamos o max(valor) pq vai trazer o valor máximo de cada cliente, pq nesse contexto iremos querer apresentar o nome junto
 
 -- Exercício 15:
 select count(distinct pedido_id) as total_pedidos, avg(quantidade) as media_pizzas from itens_pedido;
